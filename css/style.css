@@ -1,0 +1,129 @@
+html, body, main, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+header {
+  width: 100%;
+  height: 70px;
+  padding-right: 20px;
+  position: relative;
+  top: 0;
+  position: fixed;
+}
+
+#title {
+  position: relative;
+  width: 35%;
+  height: 100%;
+  margin-right: 52px;
+  float: right;
+}
+#title span {
+  letter-spacing: 8px;
+  font-size: 24px;
+  font-family: 'Scope One', serif;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+#container {
+  height: 100%;
+  width: auto;
+  margin-top: 110px;
+}
+
+#leftContent {
+  width: 65%;
+  height: 100%;
+  float: left;
+}
+
+.works {
+  margin: 170px 60px;
+}
+.works h1 {
+  font-size: 48px;
+  font-family: 'Scope One', serif;
+  font-weight: 100;
+}
+.works p {
+  color: #ccc;
+  margin-top: 20px;
+  margin-right: 20px;
+  font-size: 20px;
+  text-align: right;
+}
+
+#rightContent {
+  margin-top: 40px;
+  width: 35%;
+  height: 100%;
+  right: 0;
+  position: fixed;
+  float: left;
+}
+#rightContent p {
+  color: #555555;
+  font-size: 14px;
+  margin: 25px 60px;
+  text-align: right;
+}
+
+.clearfix:after {
+  display: block;
+  clear: both;
+  content: "";
+}
