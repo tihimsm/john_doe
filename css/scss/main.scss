@@ -11,7 +11,7 @@ header {
   position: fixed;
 }
 
-#title {
+#logo {
   position: relative;
   width: 35%;
   height: 100%;
@@ -41,7 +41,7 @@ header {
 
 .works {
   margin: 170px $side_margin;
-  h1 {
+  a {
     font-size: 48px;
     font-family: 'Scope One', serif;
     font-weight: 100;
@@ -56,17 +56,33 @@ header {
 }
 
 #rightContent {
-  margin-top: 40px;
   width: 35%;
   height: 100%;
   right: 0;
-  position: fixed;
   float: left;
-  p {
-    color: #555555;
-    font-size: 14px;
-    margin: 25px $side_margin;
-    text-align: right;
+  position: relative;
+  position: fixed;
+  #message {
+    margin-top: 40px;
+    right: $side_margin;
+    position: fixed;
+    p {
+      color: #555555;
+      font-size: 14px;
+      margin: 25px 0;
+      text-align: right;
+    }
+  }
+
+  #test {
+    position: absolute;
+    opacity: 1;
+    right: 50%;
+    width: 0px;
+    height: 100%;
+    background-image: url("../img/image01.jpg");
+    background-size: cover;
+    background-position: center center;
   }
 }
 
