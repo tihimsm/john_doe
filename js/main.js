@@ -16,17 +16,16 @@ $(function(){
           }, 100, function(){
             $('#rightContent').prepend('<div id="test"></div>');
             $('#test').transition({
-              width: '100%',
-              right:0
-            }, 300, 'cubic-bezier(1,0,0.38,1)');
+              opacity: 1,
+              scale: [1, 1]
+            }, 300, 'cubic-bezier(1,0.38,0.38,1)');
           });
         }
       },
       function(){
         $('#test').transition({
-          width: 0,
           opacity: 0,
-          right: '50%'
+          scale: [1, 0]
         }, 500, function(){
           $.when($('#test').remove())
           .then($('#message').transition({
