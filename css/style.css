@@ -70,12 +70,12 @@ header {
   position: fixed;
 }
 
-#logo {
+.logo {
   position: relative;
   height: 100%;
   margin-right: 52px;
 }
-#logo span {
+.logo span {
   letter-spacing: 8px;
   font-size: 24px;
   font-family: 'Scope One', serif;
@@ -149,23 +149,27 @@ header {
 }
 
 #detail_container {
+  z-index: 99;
   opacity: 0;
-  margin-top: 2%;
   height: 100%;
-  width: auto;
+  width: 100%;
+  transform: scale(1, 0);
+  transform-origin: 50% 0;
   background-color: #222;
+  position: fixed;
+  top: 0;
 }
 
 #det_header {
   width: 100%;
   height: 70px;
 }
-#det_header #logo {
+#det_header .logo {
   position: relative;
   height: 100%;
   margin-right: 52px;
 }
-#det_header #logo span {
+#det_header .logo span {
   letter-spacing: 8px;
   font-size: 24px;
   color: #ddd;

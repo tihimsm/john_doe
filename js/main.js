@@ -6,6 +6,7 @@ $(function(){
 
   titleHover('.title');
   titleClick('.title');
+  closeDetail('#det_header .logo span');
 
   function titleHover(title){
     $(title).hover(
@@ -13,6 +14,7 @@ $(function(){
         var id = $(this).attr('id');
         var id_str = 'img/image0' + id + '.jpg';
         if(!image_flag && !detail_flag){
+          console.log('a');
           image_flag = true;
           $('#message').transition({
             opacity: 0
@@ -59,27 +61,41 @@ $(function(){
           }, 200);
           $('#container').transition({
             opacity: 0,
-          }, 200, function(){
+            scale: [1, 0]
+          }, 500, function(){
             detail_indicate();
             $('#detail_container').transition({
-              marginTop: 0,
+              scale: [1, 1],
               opacity: 1,
-            }, 1000, function(){
-              $('header').transition({
-                scale: 0
-              }, 200);
-              $('#container').transition({
-                height: 0
-              }, 200);
-            });
+            }, 500);
           });
         });
       });
     });
   }
 
+  function closeDetail(close){
+    $(document).on('click', close, function(){
+      $('#detail_container').transition({
+        scale: [1, 0],
+        opacity: 0
+      }, 500, function(){
+        $(this).remove();
+        $('header').transition({
+          opacity: 1,
+        }, 200);
+        $('#container').transition({
+          opacity: 1,
+          scale: [1, 1]
+        }, 500);
+        image_flag = false;
+        detail_flag= false;
+      });
+    });
+  }
+
   function detail_indicate(){
-    $('body').prepend('<div id="detail_container"><div id="det_header"><div id="logo"><span>PicaVinchi</span></div></div></div>');
+    $('body').prepend('<div id="detail_container"><div id="det_header"><div class="logo"><span>PicaVinchi</span></div></div></div>');
   }
 
 });
