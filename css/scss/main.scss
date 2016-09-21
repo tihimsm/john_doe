@@ -25,7 +25,9 @@ header {
 
 #container {
   width: auto;
+  height: 100%;
   margin-top: 110px;
+  transform-origin: 50% 0;
 }
 
 #leftContent {
@@ -36,7 +38,7 @@ header {
 
 .works {
   margin: 170px $side_margin;
-  a {
+  span {
     font-size: 48px;
     font-family: 'Scope One', serif;
     font-weight: 100;
@@ -54,14 +56,13 @@ header {
 #rightContent {
   width: 35%;
   height: 100%;
+  top: 15%;
   right: 0;
-  float: left;
-  position: relative;
   position: fixed;
+  padding-right: $side_margin;
+
   #message {
     margin-top: 40px;
-    right: $side_margin;
-    position: fixed;
     p {
       color: #555555;
       font-size: 14px;
@@ -71,11 +72,9 @@ header {
   }
 
   #test {
-    position: absolute;
     transform: scale(0,1);
     opacity: 0;
-    right: $side_margin;
-    width: 90%;
+    width: 100%;
     height: 80%;
     background-size: cover;
     background-position: center center;

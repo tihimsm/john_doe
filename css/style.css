@@ -36,7 +36,6 @@ body {
   width: 100%;
   height: 100%;
   opacity: 0;
-  line-height: 1;
 }
 
 ol, ul {
@@ -86,7 +85,9 @@ header {
 
 #container {
   width: auto;
+  height: 100%;
   margin-top: 110px;
+  transform-origin: 50% 0;
 }
 
 #leftContent {
@@ -98,7 +99,7 @@ header {
 .works {
   margin: 170px 60px;
 }
-.works a {
+.works span {
   font-size: 48px;
   font-family: 'Scope One', serif;
   font-weight: 100;
@@ -115,15 +116,13 @@ header {
 #rightContent {
   width: 35%;
   height: 100%;
+  top: 15%;
   right: 0;
-  float: left;
-  position: relative;
   position: fixed;
+  padding-right: 60px;
 }
 #rightContent #message {
   margin-top: 40px;
-  right: 60px;
-  position: fixed;
 }
 #rightContent #message p {
   color: #555555;
@@ -132,11 +131,9 @@ header {
   text-align: right;
 }
 #rightContent #test {
-  position: absolute;
   transform: scale(0, 1);
   opacity: 0;
-  right: 60px;
-  width: 90%;
+  width: 100%;
   height: 80%;
   background-size: cover;
   background-position: center center;

@@ -1,4 +1,4 @@
-$(function(){
+$(window).load(function(){
   $('body').transition({opacity: 1}, 3000, 'in-out');
 
   var image_flag = false;
@@ -12,9 +12,8 @@ $(function(){
     $(title).hover(
       function(){
         var id = $(this).attr('id');
-        var id_str = 'img/image0' + id + '.jpg';
+        var id_str = 'img/0' + id + '.jpg';
         if(!image_flag && !detail_flag){
-          console.log('a');
           image_flag = true;
           $('#message').transition({
             opacity: 0
@@ -61,7 +60,7 @@ $(function(){
           }, 200);
           $('#container').transition({
             opacity: 0,
-            scale: [1, 0]
+            // scale: [1, 0]
           }, 500, function(){
             detail_indicate();
             $('#detail_container').transition({
@@ -86,7 +85,10 @@ $(function(){
         }, 200);
         $('#container').transition({
           opacity: 1,
-          scale: [1, 1]
+          // scale: [1, 1]
+        }, 500);
+        $('#message').transition({
+          opacity: 1
         }, 500);
         image_flag = false;
         detail_flag= false;
