@@ -100,6 +100,14 @@ $(window).load(function(){
 
   function detail_indicate(num){
     num -= 1;
+
+    var work_title = [
+      "kujaku 2016AW creation",
+      "Sassoon show movie",
+      "coming soon",
+      "coming soon"
+    ];
+
     var str = [
       [
         "If you really want to hear about it,",
@@ -153,7 +161,7 @@ $(window).load(function(){
     ]
     $('body').prepend('<div id="detail_container"><div id="det_header"><div id="det_logo"><span>PicaVinci</span></div><div id="close"><span>close</span><div></div></div>');
     $('#detail_container').append('<div id="det_main"><div id="movie">' + movie[num]+ '</div></div>');
-    $('#det_main').append('<div id="work"><div id="work_title"><h2>kujaku 2016AW creation</h2></div><div id="description"></div></div>');
+    $('#det_main').append('<div id="work"><div id="work_title"><h2>' + work_title[num] + '</h2></div><div id="description"></div></div>');
     for(var i=0; i<str[num].length; i++){
       $('#description').append('<p>'+ str[num][i] +'</p>');
     }
