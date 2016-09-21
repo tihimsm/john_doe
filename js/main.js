@@ -4,9 +4,9 @@ $(window).load(function(){
   var image_flag = false;
   var detail_flag = false;
 
-  titleHover('.title');
-  titleClick('.title');
-  closeDetail('#det_header .logo span');
+  titleHover('.title span');
+  titleClick('.title span');
+  closeDetail('#close span');
 
   function titleHover(title){
     $(title).hover(
@@ -23,7 +23,8 @@ $(window).load(function(){
             $('#test').transition({
               opacity: 1,
               scale: [1, 1]
-            }, 300, 'cubic-bezier(1,0.5,0.38,1)');
+            }, 300, 'cubic-bezier(1,0.5,0.38,1)', function(){
+            });
           });
         }
       },
@@ -47,6 +48,7 @@ $(window).load(function(){
 
   function titleClick(title){
     $(title).click(function(){
+      var id = $(this).attr('id');
       detail_flag = true;
       $('#test').transition({
         opacity: 0,
@@ -62,7 +64,7 @@ $(window).load(function(){
             opacity: 0,
             // scale: [1, 0]
           }, 500, function(){
-            detail_indicate();
+            detail_indicate(id);
             $('#detail_container').transition({
               scale: [1, 1],
               opacity: 1,
@@ -96,8 +98,65 @@ $(window).load(function(){
     });
   }
 
-  function detail_indicate(){
-    $('body').prepend('<div id="detail_container"><div id="det_header"><div class="logo"><span>PicaVinchi</span></div></div></div>');
+  function detail_indicate(num){
+    num -= 1;
+    var str = [
+      [
+        "If you really want to hear about it,",
+        "the first thing you'll probably want to know is where",
+        "I was born,",
+        "an what my lousy childhood was like,",
+        "and how my parents were occupied and all before",
+        "they had me,",
+        "and all that David Copperfield kind of crap,",
+        "but I don't feel like going into it,",
+        "if you want to know the truth."
+      ],
+      [
+        "How happy I am that I am gone!",
+        "My dear friend, what a thing is the heart of man!",
+        "To leave you, from whom I have been inseparable,",
+        "whom I love so dearly, and yet to feel happy!",
+        "I know you will forgive me.",
+        "Have not other attachments been specially appointed",
+        "by fate to torment a head like mine?",
+        "Poor Leonora! and yet I was not to blame."
+      ],
+      [
+        "On an exceptionally hot evening early in July",
+        "a young man came out of the garret in which he lodged in S.",
+        "Place and walked slowly,",
+        "as though in hesitation, towards K. bridge.",
+        "He had successfully avoided",
+        "meeting his landlady on the staircase.",
+        "His garret was under the roof of a high,",
+        "five-storied house and was more like a cupboard than a room."
+      ],
+      [
+        "If you really want to hear about it,",
+        "the first thing you'll probably want to know is where",
+        "I was born,",
+        "an what my lousy childhood was like,",
+        "and how my parents were occupied and all before",
+        "they had me,",
+        "and all that David Copperfield kind of crap,",
+        "but I don't feel like going into it,",
+        "if you want to know the truth."
+      ]
+    ];
+
+    var movie = [
+      "<iframe width='853' height='480' src='https://www.youtube.com/embed/PNrXEDKEinI' frameborder='0' allowfullscreen></iframe>",
+      "<iframe width='853' height='480' src='https://www.youtube.com/embed/2OwnjfCXBos' frameborder='0' allowfullscreen></iframe>",
+      "<iframe width='853' height='480' src='https://www.youtube.com/embed/s1eEFrGUOsw' frameborder='0' allowfullscreen></iframe>",
+      "<iframe width='853' height='480' src='https://www.youtube.com/embed/oCrwzN6eb4Q?list=RDoCrwzN6eb4Q' frameborder='0' allowfullscreen></iframe>"
+    ]
+    $('body').prepend('<div id="detail_container"><div id="det_header"><div id="det_logo"><span>PicaVinci</span></div><div id="close"><span>close</span><div></div></div>');
+    $('#detail_container').append('<div id="det_main"><div id="movie">' + movie[num]+ '</div></div>');
+    $('#det_main').append('<div id="work"><div id="work_title"><h2>kujaku 2016AW creation</h2></div><div id="description"></div></div>');
+    for(var i=0; i<str[num].length; i++){
+      $('#description').append('<p>'+ str[num][i] +'</p>');
+    }
   }
 
 });
