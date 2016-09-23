@@ -39,7 +39,7 @@ header {
 }
 
 .works {
-  margin: 100px 4%;
+  margin: 25% 4%;
 }
 .works span {
   font-size: 24px;
@@ -56,8 +56,7 @@ header {
 
 #rightContent {
   width: 100%;
-  height: 100%;
-  top: 5%;
+  top: 6%;
   right: 0;
   position: fixed;
 }
@@ -70,14 +69,6 @@ header {
   font-size: 11px;
   margin: 3px 0;
   text-align: right;
-}
-#rightContent #test {
-  transform: scale(0, 1);
-  opacity: 0;
-  width: 86%;
-  height: 80%;
-  background-size: cover;
-  background-position: center center;
 }
 
 .clearfix:after {
@@ -101,12 +92,12 @@ header {
 
 #det_header {
   width: 100%;
-  height: 70px;
+  height: 40px;
 }
 #det_header #det_logo {
   width: 20%;
   height: 100%;
-  margin-left: 5%;
+  margin-left: 7%;
   float: left;
   position: relative;
 }
@@ -114,13 +105,13 @@ header {
   position: absolute;
   bottom: 0;
   letter-spacing: 0.4em;
-  font-size: 24px;
+  font-size: 16px;
   font-family: 'Scope One', serif;
 }
 #det_header #close {
   width: 20%;
   height: 100%;
-  margin-right: 4%;
+  margin-right: 6%;
   float: right;
   position: relative;
 }
@@ -130,7 +121,7 @@ header {
   right: 0;
   bottom: 0.4em;
   letter-spacing: 0.4em;
-  font-size: 12px;
+  font-size: 9px;
   font-family: 'Scope One', serif;
 }
 
@@ -140,42 +131,41 @@ header {
 }
 
 #movie {
-  width: 60%;
-  height: 100%;
+  width: 100%;
+  height: 40%;
   float: left;
+  margin-top: 2%;
 }
 #movie iframe {
-  width: 75% !important;
-  height: 60% !important;
+  width: 86% !important;
+  height: 75% !important;
   display: block;
-  margin-top: 18%;
-  margin-left: 8.5%;
+  margin: 10% auto 0;
 }
 
 #work {
-  width: 40%;
+  width: 100%;
   height: 100%;
   float: left;
 }
 
 #work_title {
-  margin-top: 5%;
-  margin-right: 10.5%;
+  margin-right: 7.5%;
 }
 #work_title h2 {
   text-align: right;
   letter-spacing: 2px;
-  font-size: 32px;
+  font-size: 18px;
   font-family: 'Scope One', serif;
 }
 
 #description {
-  margin-top: 12.5%;
-  margin-right: 11%;
+  margin-top: 8%;
+  margin-right: 9%;
 }
 #description p {
-  font-size: 16px;
-  margin-bottom: 5%;
+  font-size: 11px;
+  margin-bottom: 3%;
   text-align: right;
   font-family: 'Scope One', serif;
 }
