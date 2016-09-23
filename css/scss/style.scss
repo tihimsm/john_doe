@@ -3,4 +3,5 @@
 // Import
 // --------------------------------------------------
 @import "reset";
-@import "main";
+@import url(main.css) screen and (min-width: 481px);
+@import url(smart.css) screen and (max-width: 480px);
