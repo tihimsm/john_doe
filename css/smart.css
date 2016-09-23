@@ -132,12 +132,12 @@ header {
 
 #movie {
   width: 100%;
-  height: 37%;
+  height: 40%;
   float: left;
 }
 #movie iframe {
   width: 86% !important;
-  height: 75% !important;
+  height: 80% !important;
   display: block;
   margin: 6% auto 0;
 }
