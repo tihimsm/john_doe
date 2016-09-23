@@ -139,14 +139,13 @@ header {
 
 #movie {
   width: 100%;
-  height: 40%;
+  height: 37%;
   float: left;
-  margin-top: 2%;
   iframe {
     width: 86% !important;
     height:75% !important;
     display: block;
-    margin: 10% auto 0;
+    margin: 6% auto 0;
   }
 }
 
@@ -167,7 +166,7 @@ header {
 }
 
 #description {
-  margin-top: 8%;
+  margin-top: 6%;
   margin-right: $side_margin + 4%;
   p {
     font-size: 11px;
