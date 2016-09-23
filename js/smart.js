@@ -73,9 +73,6 @@ $(window).load(function(){
         $('#container').transition({
           opacity: 1,
         }, 500);
-        $('#message').transition({
-          opacity: 1
-        }, 500);
         image_flag = false;
         detail_flag= false;
       });
